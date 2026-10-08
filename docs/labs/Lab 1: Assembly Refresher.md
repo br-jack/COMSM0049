@@ -217,6 +217,11 @@ Again, use the manual pages and your favorite search engine to help.
 Make sure you're clear on what the differences are! If in doubt stick
 your hand up and get the TAs/Lecturers to confirm your suspicions!
 
+32 bit uses a software interrupt (int 0x80) wheras 64 uses syscall. They use different registers for their arguments and syscall numbers. Different return registers
+Different write/exit numbers 
+32 -> cdecl
+64 -> system V
+
 # Hello World C
 
 Okay we can compile and decompile a program now and we can see that the
