@@ -4,7 +4,7 @@
 - [ ] Go read [Exploiting a Format String Bug in Solaris CDE by Marco Ivaldi](http://phrack.org/issues/70/13.html)
 - [x] Go lookup what the different [X86 calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions) are and make a note of them (in particular make sure you read about `cdecl`, `syscall` and the `x86-64` conventions... you'll need them for this course!
 - [x] Go watch this video from LiveOverflow [Explaining Dirty COW local root exploit - CVE-2016-5195](https://youtu.be/kEsshExn7aE) and check you understand the race condition and how it works (12 minutes)
-- [ ] Go watch this video from Retro Game Mechanics [Super Mario World Credits Warp Explained](https://youtu.be/vAHXK2wut_I) as a *fun* example of arbitrary code execution.
+- [x] Go watch this video from Retro Game Mechanics [Super Mario World Credits Warp Explained](https://youtu.be/vAHXK2wut_I) as a *fun* example of arbitrary code execution.
 
 ## Exercises
 
