@@ -1,7 +1,7 @@
 # Week 1 Homework
 
 - [x] Go read [Smashing the Stack For Fun and Profit by Aleph One](http://phrack.org/issues/49/14.html)
-- [ ] Go read [Exploiting a Format String Bug in Solaris CDE by Marco Ivaldi](http://phrack.org/issues/70/13.html)
+- [x] Go read [Exploiting a Format String Bug in Solaris CDE by Marco Ivaldi](http://phrack.org/issues/70/13.html)
 - [x] Go lookup what the different [X86 calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions) are and make a note of them (in particular make sure you read about `cdecl`, `syscall` and the `x86-64` conventions... you'll need them for this course!
 - [x] Go watch this video from LiveOverflow [Explaining Dirty COW local root exploit - CVE-2016-5195](https://youtu.be/kEsshExn7aE) and check you understand the race condition and how it works (12 minutes)
 - [x] Go watch this video from Retro Game Mechanics [Super Mario World Credits Warp Explained](https://youtu.be/vAHXK2wut_I) as a *fun* example of arbitrary code execution.
@@ -9,10 +9,28 @@
 ## Exercises
 
 1. The `gets()` function from the C standard library is considered dangerous: explain why, how it could be exploited and what a programmer should use instead? (5 marks)
+Gets allows the user to input an aribitrary amount of data into the program, this can cause buffer overflow. It could be exploited by intentionally overflowing the buffer and sending the program to another place in memory and executing other code. A programmer should use scanf() so the program throws an error if excess data is input? 
 
 2. Explain how a system call is made on Linux for a 32bit X86 system (5 marks)
+The call arguments are moved to the registers, a software interupt is executed. This calls the kernel which executes whatever is on the registers then if there is return data that is placed on the registers.
 
 3. Different operating systems have taken different approaches to handling dangerous standard library functionality (like the ~%n~ format string specifier).  Alice says these features should be removed as they can be dangerous, but Bob says that they cannot be removed because legacy code may rely on them and in any case it is not the operating systems job to protect the user from their own mistakes.  Discuss (i.e. both sides of the argument with a conclusion) who is right and the relative tradeoffs (15 marks)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--
@@ -23,13 +41,13 @@
 It is considered dangerous because if the input is larger than the buffer itself then gets will continue writing (1) over adjacent memory (1).
 If adjacent memory contains control flow data (eg return addressess) then this can be over written and control flow hijacked leading to arbitrary code execution (1).  Don't use gets... use bounded variants instead (1).
 
-2. Syscall number in eax (1).
+1. Syscall number in eax (1).
 Arguments in ebx ecx edx esi edi (1)
 Additional arguments (if necessary via the stack) (1)
 Call int 0x80 to trigger the syscall (1)
 Return code in eax (1)
 
-3. Breaking legacy code is always problematic, and we should usually try and avoid it.
+1. Breaking legacy code is always problematic, and we should usually try and avoid it.
 That said, in this case there may be an argument for it as %n is relatively obscure and it opens up several opportunities for abuse.
 Code that does use it could be rewritten relatively trivially for most cases, even for a relatively inexperienced programmer.
 Looking at the system log for my OpenBSD system which logs uses I can't see any applications that actually use it in my day to day use so breaking it may be justified.
