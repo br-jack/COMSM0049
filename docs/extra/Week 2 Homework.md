@@ -4,26 +4,26 @@
 
 (Key bits marked with a *, rest optional)
 
-- * [Vudu malloc tricks (Michel "MaXX" Kaempf)](http://phrack.org/issues/57/8.html)
-- * [Once upon a free (anonymous)](http://phrack.org/issues/57/9.html)
-- [The Malloc Maleficarum (Phantasmal Phantasmagoria)](https://seclists.org/bugtraq/2005/Oct/118)
-- [The Malloc Des-Maleficarum
+- [ ] * [Vudu malloc tricks (Michel "MaXX" Kaempf)](http://phrack.org/issues/57/8.html)
+- [ ] * [Once upon a free (anonymous)](http://phrack.org/issues/57/9.html)
+- [ ] [The Malloc Maleficarum (Phantasmal Phantasmagoria)](https://seclists.org/bugtraq/2005/Oct/118)
+- [ ] [The Malloc Des-Maleficarum
   (blackngel)](http://phrack.org/issues/66/10.html) :: A practical
   guide to the Malloc Maleficarum...
 
-- * [Glibc Malloc
+- [ ] * [Glibc Malloc
   Internals](https://sourceware.org/glibc/wiki/MallocInternals) :: a really good
   guide to how malloc works
 
 ## Alternative explanations and videos
 
-- [Live Overflow 0x14: The Heap: what does malloc()
+- [ ] [Live Overflow 0x14: The Heap: what does malloc()
 do?](https://www.youtube.com/watch?v=HPDBOhiKaD8)
-- [Live Overflow 0x15: The Heap: How to exploit a Heap Overflow](https://www.youtube.com/watch?v=TfJrU95q1J4)
-- [Live Overflow 0x16: How do use-after-free exploits work?](https://youtu.be/ZHghwsTRyzQ)
-- [Live Overflow 0x17: The Heap: Once upon a
+- [ ] [Live Overflow 0x15: The Heap: How to exploit a Heap Overflow](https://www.youtube.com/watch?v=TfJrU95q1J4)
+- [ ] [Live Overflow 0x16: How do use-after-free exploits work?](https://youtu.be/ZHghwsTRyzQ)
+- [ ] [Live Overflow 0x17: The Heap: Once upon a
   free()](https://youtu.be/gL45bjQvZSU)
-- [Live Overflow 0x18: The Heap: dlmalloc unlink() exploit](https://youtu.be/HWhzH--89UQ)
+- [ ] [Live Overflow 0x18: The Heap: dlmalloc unlink() exploit](https://youtu.be/HWhzH--89UQ)
   
 ## Exercises
 

@@ -1,10 +1,10 @@
 # Week 1 Homework
 
-- Go read [Smashing the Stack For Fun and Profit by Aleph One](http://phrack.org/issues/49/14.html)
-- Go read [Exploiting a Format String Bug in Solaris CDE by Marco Ivaldi](http://phrack.org/issues/70/13.html)
-- Go lookup what the different [X86 calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions) are and make a note of them (in particular make sure you read about `cdecl`, `syscall` and the `x86-64` conventions... you'll need them for this course!
-- Go watch this video from LiveOverflow [Explaining Dirty COW local root exploit - CVE-2016-5195](https://youtu.be/kEsshExn7aE) and check you understand the race condition and how it works (12 minutes)
-- Go watch this video from Retro Game Mechanics [Super Mario World Credits Warp Explained](https://youtu.be/vAHXK2wut_I) as a *fun* example of arbitrary code execution.
+- [x] Go read [Smashing the Stack For Fun and Profit by Aleph One](http://phrack.org/issues/49/14.html)
+- [ ] Go read [Exploiting a Format String Bug in Solaris CDE by Marco Ivaldi](http://phrack.org/issues/70/13.html)
+- [ ] Go lookup what the different [X86 calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions) are and make a note of them (in particular make sure you read about `cdecl`, `syscall` and the `x86-64` conventions... you'll need them for this course!
+- [ ] Go watch this video from LiveOverflow [Explaining Dirty COW local root exploit - CVE-2016-5195](https://youtu.be/kEsshExn7aE) and check you understand the race condition and how it works (12 minutes)
+- [ ] Go watch this video from Retro Game Mechanics [Super Mario World Credits Warp Explained](https://youtu.be/vAHXK2wut_I) as a *fun* example of arbitrary code execution.
 
 ## Exercises
 
@@ -15,6 +15,7 @@
 3. Different operating systems have taken different approaches to handling dangerous standard library functionality (like the ~%n~ format string specifier).  Alice says these features should be removed as they can be dangerous, but Bob says that they cannot be removed because legacy code may rely on them and in any case it is not the operating systems job to protect the user from their own mistakes.  Discuss (i.e. both sides of the argument with a conclusion) who is right and the relative tradeoffs (15 marks)
 
 
+<!--
 
  Answers (do not check this before you try to answer the exercices alone)
 
@@ -38,4 +39,4 @@ That said, there may be the odd legitimate use.  And where source code is long s
 Perhaps warning on its use more and more vociferously is the right approach in the short term (compiler and user warnings).  Notifiying users that their apps will imminently be broken and pushing standards organisations to kill the feature in the longer term and empirically measuring how much actually depends on it before ultimately ditching it is the right approach long term?  Ultimately though, arguments for getting rid of it outweigh the benefits.
 
 
-
+-->
