@@ -360,18 +360,42 @@ Okay lets test what you read.
 
 1.  How many bytes are allocated on the stack in `check_password` to
     hold all the variables?
+
+64
+
 2.  What do `rbp` and `rsp` point to? Which is bigger and which is
     smaller?
+
+rsp -> (points to top of stack) lower mem addr
+rbp -> (points to base of stack (frame pointer))higher mem addr
+
 3.  Those are some big scary numbers in your disassembly! What are they?
     (Hint go look at an ASCII table).
+
+The solution string (first and second halves)
+
 4.  What is the address of the `char buffer[]` relative to the base
     pointer in `check_password`?
+
+-27
+
 5.  What is the address of the `char solution[]` relative to the base
     pointer in `check_password`?
+
+-42 and -35
+
 6.  What is the address of `argc` in `main`?
+
+-16
+
 7.  Where does `argv` point to initially and why does it add 8 to it
     instead of 1 in `main`?
+
+rbp-4, because its skipping over arg[0]
+
 8.  What is the password?
+
+DPNTN115:JTGVO
 
 # Assembly Comprehension
 
@@ -383,14 +407,14 @@ what little snippets of code do.
 What does this snippet of code do?
 
 ``` asm
-xor      eax,eax
-lea      rbx,[0]
-loop     $
-mov      rdx,0
-and      esi,0
-sub      edi,edi
-push     0
-pop      rbp
+xor      eax,eax; sets eax to 0
+lea      rbx,[0]; lea -> load effective addr. Loads whatever 0 points to into rbx
+loop     $      ; loops in place
+mov      rdx,0  ; sets rdx to 0
+and      esi,0  ; sets esi to 0
+sub      edi,edi; sets edi to 0
+push     0      ; pushes 0 to the stack
+pop      rbp    ; pops whatevers in the stack into rbp
 ```
 
 You might need to look things up in [The Intel 64 and IA-32
@@ -404,8 +428,8 @@ What about this snippet?
 
 ``` asm
 .loop:
-            xadd rax, rdx
-            loop .loop
+            xadd rax, rdx ; adds rax and rdx
+            loop .loop    ; jumps back to .loop
 ```
 
 Hint  
