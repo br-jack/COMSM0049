@@ -12,7 +12,7 @@ heard of it) is one of those fundamental technologies holding up the internet;
 so it's always interesting to see these severe bugs appearing… 
 
 - [ ] [Disclosure notice](https://curl.se/docs/CVE-2023-38545.html)
-- [ ] [Redhat leaked the patch a little early…](https://cohost.org/lifning/post/3137540-lib-curl-cve-2023-38)
+- [x] [Redhat leaked the patch a little early…](https://cohost.org/lifning/post/3137540-lib-curl-cve-2023-38)
 
 ## Alternative explanations and videos
 
