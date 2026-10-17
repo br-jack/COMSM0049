@@ -240,7 +240,7 @@ Your **tasks** for this lab are:
 
 1. With the unmodified setuid-root program, find ways to do the following:
     1.  Crash the program.
-    2.  Print out the value of `secret[1]`.
+    2.  Print out the value of `secret[1]`. %x%x%x%x%x%x%x%ls
     3.  Modify the value of `secret[1]`.
     4.  Modify the value of `secret[1]` to a value of your choosing.
 2.  Comment out lines 27-28:
