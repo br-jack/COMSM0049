@@ -7,11 +7,14 @@
 int main(int argc, char *argv[])
 {
     char user_input[100];
+    int *fix;
     int *secret;
     int int_input;
     int a, b, c, d; /* other variables, not used here.*/
 
     /* The secret value is stored on the heap */
+    fix = (int *)malloc(sizeof(int));
+    free(fix);
     secret = (int *)malloc(2 * sizeof(int));
 
     /* getting the secret */
