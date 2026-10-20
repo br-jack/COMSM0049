@@ -135,6 +135,7 @@ When you do `gdb <program>`, you can use the following commands at its prompt.
 | `n [n]`                              | step `n`lines in the source of the current function, executing any function calls on the way                                                                                                                                                             |
 | `ni [n]`                             | step `n`machine instructions in the current function, executing any function calls on the way                                                                                                                                                            |
 | `info registers`                     | display current register values                                                                                                                                                                                                                          |
+| `info frame`                         | apparently very very useful
 | `disassemble/mr <function>`          | disassemble a function (among other things you can then work out the exact layout of its stack frame)                                                                                                                                                    |
 | `x/<n><t>[s] m` (e.g. `x/20xb $esp`) | dump memory: `n` = number of items to show, `t` = type (`x`=hex,`d`/`u`=signed/unsigned int, `c`=char, `a`=address, `s`=string), `s`=size (`b`=byte, `h`=halfword (2 bytes), `w`=word), `m` = memory location, or register pointing to a memory location |
 | `print <expression>`                 | print the value of something                                                                                                                                                                                                                             |
@@ -336,3 +337,6 @@ If your stack is non-executable but your heap isn't, you might be able to get yo
 What if all your data sections (heap and stack) are non-executable? Research and explain how the "return-to-libc" attack can be used to get a shell.
 
 **Note**: C functions such as `system()` generally expect their parameters on the stack rather than in the registers.
+
+
+try injecting it throught weirder and weirder places e.g. env variables
