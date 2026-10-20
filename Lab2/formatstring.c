@@ -7,15 +7,15 @@
 int main(int argc, char *argv[])
 {
     char user_input[100];
-    int *fix;
+   int *fix;
     int *secret;
     int int_input;
     int a, b, c, d; /* other variables, not used here.*/
-
+    
     /* The secret value is stored on the heap */
-    fix = (int *)malloc(sizeof(int));
-    free(fix);
+    fix = (int *)malloc(2*sizeof(int));
     secret = (int *)malloc(2 * sizeof(int));
+    free(fix);
 
     /* getting the secret */
     secret[0] = SECRET1;
@@ -26,6 +26,8 @@ int main(int argc, char *argv[])
     printf("secret[0]'s address is 0x%8x (on heap)\n", (unsigned int)&secret[0]);
     printf("secret[1]'s address is 0x%8x (on heap)\n", (unsigned int)&secret[1]);
 
+    printf("Please enter a decimal integer\n");
+    scanf("%d", &int_input);  /* getting an input from user */
     printf("Please enter a string\n");
     scanf("%s", user_input); /* getting a string from user */
 
