@@ -251,6 +251,11 @@ You can either experiment to find this offset (create a program that prints out 
 - If you can't get the exact address of your shellcode, you can use a NOP sled: a sequence of NOP (`0x90`) bytes before your actual shellcode starts, as long as possible.
 As long as you manage to jump to anywhere within the NOP sled, your program will "slide" down to the shellcode at the end and execute it.
 
+Notes:
+
+- Trying to set eip to `0xbffff267`
+
+
 Task 2: Defences
 ------------------
 
