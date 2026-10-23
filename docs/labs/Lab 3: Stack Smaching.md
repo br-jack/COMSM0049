@@ -340,3 +340,5 @@ What if all your data sections (heap and stack) are non-executable? Research and
 
 
 try injecting it throught weirder and weirder places e.g. env variables
+
+Try doing it without compiling wih -g
