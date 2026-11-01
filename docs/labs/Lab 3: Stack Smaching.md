@@ -356,10 +356,12 @@ try injecting it throught weirder and weirder places e.g. env variables
 
 - [ ] Maybe some weirdness with how we input the shellcode. maybe try doing it with stdin? <- netgarage might do ths < ${cat} or whatever
 
-- [ ] look into how gdb effects addr layout/offset or whatever (should just work with big nop slide)
+- [x] look into how gdb effects addr layout/offset or whatever (should just work with big nop slide)
 
 - [ ] argv input, stdin, file input
 
 - [ ] possibly different architecture?
 
 - [ ] maybe 64 bit :(
+
+- [ ] real and effective uid
