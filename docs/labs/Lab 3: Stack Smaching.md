@@ -245,6 +245,8 @@ Hints for Task 1:
 - Debug the non-root version by calling `gdb stack`.
 Set a breakpoint in `bof()` just after the `strcpy` and look at the stack frame: with ASLR off, what is the location of the return address? What is its offset of the return address from the start of the buffer?
 
+27 bytes
+
 - There may be a slight difference in the stack addresses between a program run normally, in a debugger and setuid root.
 You can either experiment to find this offset (create a program that prints out the address of something on the stack and run it once in the debugger, once without) or you can use the next hint.
 
@@ -253,7 +255,8 @@ As long as you manage to jump to anywhere within the NOP sled, your program will
 
 Notes:
 
-- Trying to set eip to `0xbffff267`
+- eip at`0xbffff28c`
+- 
 
 
 Task 2: Defences
@@ -344,6 +347,19 @@ What if all your data sections (heap and stack) are non-executable? Research and
 **Note**: C functions such as `system()` generally expect their parameters on the stack rather than in the registers.
 
 
+Questions: 
+- Why bof how do I know? How will I know for no -g?
+
 try injecting it throught weirder and weirder places e.g. env variables
 
-Try doing it without compiling wih -g
+- [ ] Try doing it without compiling wih -g
+
+- [ ] Maybe some weirdness with how we input the shellcode. maybe try doing it with stdin? <- netgarage might do ths < ${cat} or whatever
+
+- [ ] look into how gdb effects addr layout/offset or whatever (should just work with big nop slide)
+
+- [ ] argv input, stdin, file input
+
+- [ ] possibly different architecture?
+
+- [ ] maybe 64 bit :(
