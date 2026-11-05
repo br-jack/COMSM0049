@@ -11,6 +11,9 @@ Shellcode:
 
 `xxd -p -r shellcode > badfile`
 
+`xxd -p -r attack.txt | tr -d '\n' > attack.hex` - take hex in attack.txt and put as bytes in attack.hex, with no newlines
+
+
 ### GDB
 
 | Command                              | Meaning                                                                                                                                                                                                                                                  |
@@ -32,7 +35,9 @@ Shellcode:
 | `display <expression>`               | print something every time you hit a breakpoint or step                                                                                                                                                                                                  |
 | `l [n]`                              | list `n` lines of code, default 10                                                                                                                                                                                               |
 | `layout asm`                         | show assembly layout                                                                                                                                                                                                                                     |
+| `x/s *((char **)environ)`            | dump env variables |
 
+> TODO: How to set an env variable
 > NB: gdb offset probably 0x40
 
 ### Scripts
@@ -63,6 +68,9 @@ sudo apt-get install gcc xxd vim -y
 ### Other
 
 > TODO: how to input file through cli
+
+> TODO: double check below
+`perl -e 'print "A"x100' | ./program`
 
 ## Lab3 Walkthrough
 
