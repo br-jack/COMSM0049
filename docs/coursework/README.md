@@ -1,20 +1,25 @@
 # Part A—Unit Specific Coursework Details
 
-Unit Number:  COMSM0102
+Unit Number:  
+COMSM0102
 
-Unit Name:  Systems & Software Security
+Unit Name:  
+Systems & Software Security
 
-Unit Director:  Sana Belguith
+Unit Director:  
+~~Sana Belguith~~ Gretchen Hallett *in absentia*
 
-Assignment Name:  Systems & Software Security Coursework
+Assignment Name:  
+Systems & Software Security Coursework
 
-Assignment Weighting:  30%
+Assignment Weighting:  
+30%
 
 ## Assignment Description:
 
 This coursework is for unit COMSM0102 Systems & Software Security
-Coursework. It will be released on *Friday 8<sup>th</sup> November* and
-must be submitted by *Friday 29<sup>th</sup> November* at 1pm at the
+Coursework. It will be released on *Friday 13<sup>th</sup> November* and
+must be submitted by *Thursday 3<sup>rd</sup> December* at 1pm at the
 very latest. The intention is that you submit by 12pm and keep the last
 hour as an emergency reserve for technical problems.
 
@@ -136,15 +141,16 @@ by generating such exploits automatically. In particular:
 
 ## Support provided to students during coursework period
 
-Joseph and Sana are both available to answer questions on Teams or by
-email, we also set up Q&A sessions-check your timetables.
+Gretchen is available to answer questions on Teams or by email, and will
+be running office hours in the labs as usual during the coursework
+period.
 
 ## Submission Details
 
 Both final writeup and project demonstration to be submitted in
-Blackboard: Systems and Software Security (with Coursework) 2024
-$\rightarrow$ Assessment, submission and feedback Project $\rightarrow$
-Systems and Software Security Coursework
+Blackboard: Systems and Software Security (with Coursework) 2026
+$`\rightarrow`$ Assessment, submission and feedback Project
+$`\rightarrow`$ Systems and Software Security Coursework
 
 ## Marking Criteria
 
@@ -153,7 +159,7 @@ Systems and Software Security Coursework
 | Weight | Category | Comment |
 |:---|:---|:---|
 | 10% | Technical Clarity | You will explain clearly how to run your project. Technical terminology should be used appropriately. You should assume an educated audience of your peers and explain terminologies and concepts specific to your project. It should be clear how that relates to the evaluation section of your report. |
-| 20% | Instructions Clarity | The instructions contained in your `README` should be simple to follow and lead to the results presented in your report. You need to demonstrate this, by following the instructions step by step in your video. We invite you to start from a "clean" environment. |
+| 20% | Instructions Clarity | The instructions contained in your `README` should be simple to follow and lead to the results presented in your report. You need to demonstrate this, by following the instructions step by step in your video. We invite you to start from a “clean" environment. |
 
 ### Report Marking Scheme (70%)
 
@@ -169,7 +175,7 @@ Systems and Software Security Coursework
 ## Deadline
 
 The deadline for submission of all optional unit assignments is 13:00 on
-Friday 29<sup>th</sup> November. Students should submit all required
+Thursday 3<sup>rd</sup> December. Students should submit all required
 materials to the *“Assessment, submission and feedback”* section of
 Blackboard—it is essential that this is done on the Blackboard page
 related to the *“With Coursework”* variant of the unit.
