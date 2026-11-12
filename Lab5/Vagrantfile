@@ -1,0 +1,31 @@
+$script = <<-'SCRIPT'
+apt-get update -y
+apt-get install -y gcc-multilib g++-multilib clang build-essential
+wget https://lcamtuf.coredump.cx/afl/releases/afl-2.52b.tgz
+tar xzf afl-2.52b.tgz
+cd afl-2.52b
+make
+make install
+cd ..
+mkdir -p temp-in
+mkdir -p temp-out
+mkdir -p test-bins
+wget https://raw.githubusercontent.com/cs-uob/COMSM0049/master/docs/labs/heartbeat_normal.bin -O temp-in/heartbeat_normal.bin
+wget https://raw.githubusercontent.com/cs-uob/COMSM0049/master/docs/labs/heartbleed.c -O heartbleed.c
+chown -R vagrant:vagrant ~vagrant
+SCRIPT
+
+$memory = 2048
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/debian12"
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+  config.vm.provision "shell", inline: $script
+  config.vm.provider "virtualbox" do |v|
+    v.memory = $memory
+  end
+  config.vm.provider "libvirt" do |v|
+    v.memory = $memory
+  end
+end
