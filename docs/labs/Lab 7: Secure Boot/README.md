@@ -74,7 +74,7 @@ Before signing any images, we need to generate a private and public key pair:
 1. `openssl genrsa -out privatekey.pem 2048` This generates the new private key.
 2. We can view this key using `openssl rsa -text -in privatekey.pem -noout`
 3. `openssl rsa -in privatekey.pem -outform PEM -pubout -out publickey.pem` This generates the public key from the private key.
-4. Again, we can look at the public key `openssl rsa -pubin publickey.pem -text -noout`
+4. Again, we can look at the public key `openssl rsa -pubin -in publickey.pem -text -noout`
 
 ### Provision the public key fingerprint
 
@@ -98,7 +98,7 @@ static  unsigned char s_public_key_fingerprint[] = {0x00, 0x00, 0x00, 0x00, 0x00
 Replace this value with the fingerprint of the public key we already generated.
 
 1. `openssl dgst -sha256 -binary -out publickey.sha256.bin publickey.pem` This will create a sha256 hash of the public key
-2. `xxd -p publickey.sha256.bin | tr -d '\n' | sed 's/../0x&\,/g; s/,$//'` To view the file as the file in the format 0x??,
+2. `xxd -p publickey1.sha256.bin | tr -d '\n' | sed 's/../0x&\, /g; s/, $//';echo` To view the file as the file in the format 0x??,
 3. Update the `s_public_key_fingerprint` in the source code `secure_boot.c`.
 
 We have now provisioned the public key fingerprint
@@ -179,7 +179,7 @@ The function `EVP_DigestVerifyUpdate(ctx, image, image_len)` hashes the image.
 The `EVP_DigestVerifyFinal(ctx, signature, signature_._len)` verifies the data in context against the signature
 
 1. Implement the `verify_image()` function to validate the image; if the image is valid, then return 1.
-2. `secure_boot` should now run the image
+2. `./secure_boot image.sh.signed` should now run the image
 
 ## Key revocation
 

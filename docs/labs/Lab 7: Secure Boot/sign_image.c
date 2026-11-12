@@ -47,7 +47,7 @@
 #define SB_SIGNED_EXT_LEN (7)
 
 /**
- * A string pointer with length
+ * A string pinter with length
  */
 typedef struct
 {
